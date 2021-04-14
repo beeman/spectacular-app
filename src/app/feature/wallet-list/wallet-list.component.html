@@ -1,0 +1,12 @@
+<ng-container *ngFor="let wallet of wallets$ | async">
+  <div class="pad">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ wallet.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <pre>{{ wallet | json }}</pre>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>
