@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 
 const SAMPLE_CONTACTS = [
-  { id: 'chau', name: 'Chau', email: 'Chau@beeman.dev' },
-  { id: 'dominik', name: 'Dominik', email: 'Dominik@beeman.dev' },
-  { id: 'nacho', name: 'Nacho', email: 'Nacho@beeman.dev' },
-  { id: 'serkan', name: 'Serkan', email: 'Serkan@beeman.dev' },
+  { id: 'chau', company: 'Beeman.DEV', name: 'Chau', email: 'Chau@beeman.dev' },
+  { id: 'dominik', company: 'Beeman.DEV', name: 'Dominik', email: 'Dominik@beeman.dev' },
+  { id: 'nacho', company: 'Beeman.DEV', name: 'Nacho', email: 'Nacho@beeman.dev' },
+  { id: 'serkan', company: 'Beeman.DEV', name: 'Serkan', email: 'Serkan@beeman.dev' },
 ]
 
 const SAMPLE_WALLETS = [

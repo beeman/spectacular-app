@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { AppComponent } from './app.component'
 import { LayoutComponent } from './layout/layout.component'
 import { MaterialModule } from './material.module'
+import { CONTACT_PATH } from './feature/contact/contact.contstants'
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'wallets' },
@@ -13,7 +14,7 @@ const routes: Routes = [
     path: 'wallets',
     loadChildren: () => import('./feature/wallet-list/wallet-list.module').then((m) => m.WalletListModule),
   },
-  { path: 'contacts', loadChildren: () => import('./feature/contact/contact.module').then((m) => m.ContactModule) },
+  { path: CONTACT_PATH, loadChildren: () => import('./feature/contact/contact.module').then((m) => m.ContactModule) },
 ]
 
 @NgModule({
