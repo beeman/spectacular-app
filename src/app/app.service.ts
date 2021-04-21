@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core'
 import { BehaviorSubject } from 'rxjs'
 
 const SAMPLE_CONTACTS = [
-  { id: 'chau', name: 'Chau' },
-  { id: 'dominik', name: 'Dominik' },
-  { id: 'nacho', name: 'Nacho' },
-  { id: 'serkan', name: 'Serkan' },
+  { id: 'chau', name: 'Chau', email: 'Chau@beeman.dev' },
+  { id: 'dominik', name: 'Dominik', email: 'Dominik@beeman.dev' },
+  { id: 'nacho', name: 'Nacho', email: 'Nacho@beeman.dev' },
+  { id: 'serkan', name: 'Serkan', email: 'Serkan@beeman.dev' },
 ]
 
 const SAMPLE_WALLETS = [
@@ -27,4 +27,8 @@ export class AppService {
   contacts$ = this.contacts.asObservable()
   private wallets = new BehaviorSubject([...SAMPLE_WALLETS])
   wallets$ = this.wallets.asObservable()
+
+  contact(contactId: string) {
+    return this.contacts.getValue().find((contact) => contact.id === contactId)
+  }
 }

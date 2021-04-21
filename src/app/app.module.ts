@@ -13,10 +13,7 @@ const routes: Routes = [
     path: 'wallets',
     loadChildren: () => import('./feature/wallet-list/wallet-list.module').then((m) => m.WalletListModule),
   },
-  {
-    path: 'contacts',
-    loadChildren: () => import('./feature/contact-list/contact-list.module').then((m) => m.ContactListModule),
-  },
+  { path: 'contacts', loadChildren: () => import('./feature/contact/contact.module').then((m) => m.ContactModule) },
 ]
 
 @NgModule({
